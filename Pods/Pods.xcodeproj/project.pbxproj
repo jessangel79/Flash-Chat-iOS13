@@ -964,7 +964,7 @@
 		3A2106303D07922D21751C23FDBC70C4 /* udp_listener_config.upb.h in Headers */ = {isa = PBXBuildFile; fileRef = 60128C885596B908EEAC1BDCC6262EE3 /* udp_listener_config.upb.h */; };
 		3A2E1F4EE9A3E29AACF6371239EE32DE /* udp_server.h in Copy src/core/lib/iomgr Private Headers */ = {isa = PBXBuildFile; fileRef = F2949AFB1B8B7CE6C258F3A754C14FCF /* udp_server.h */; };
 		3A4E75BABEBD9BB5F5053BDE9471EE66 /* tcp_client.cc in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC8753B08E48B3657421D59D678F7 /* tcp_client.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
-		3A7ABF9E2559766900FB52BA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7ABF9D2559766800FB52BA /* CoreServices.framework */; };
+		3A7AC0412559A6A200FB52BA /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7AC0402559A6A200FB52BA /* CoreServices.framework */; };
 		3A85A2D530527CC70F9477C72BB9D9DA /* transport_security_common_api.h in Copy src/core/tsi/alts/handshaker Private Headers */ = {isa = PBXBuildFile; fileRef = 2340302B977D236C720E4CB11B0F657D /* transport_security_common_api.h */; };
 		3A8A212A411EF669F1A77CC12176244F /* pkcs8.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD0795F538C975804132BD287EA6D71 /* pkcs8.h */; };
 		3A9947C1BFE670E619D32E9D51B2FEC0 /* channel_stack_type.h in Copy src/core/lib/surface Private Headers */ = {isa = PBXBuildFile; fileRef = D016581D1EB3E818A6FEF444AE78CC95 /* channel_stack_type.h */; };
@@ -3723,7 +3723,6 @@
 		E0C2BCD62B88D0278312E0FD3CC07C06 /* siphash.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 07E46063CEB061E7BE74AC790CC15E83 /* siphash.h */; };
 		E0DA1CDAB9F80A5B83ADEA7318FB3092 /* client_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FAC5C87FB04825562CB61AEB5DC5069 /* client_context.h */; };
 		E0E0F3471412FE2BDFBB627613E1D98B /* pollset_custom.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4183E0192B936234BF98F43D108E8E94 /* pollset_custom.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
-		E0E37D65C6F4A587EB97D793F167889F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AEA167A4105F6D57F06E1744B5C86E /* MobileCoreServices.framework */; };
 		E10803425767645FD6A4270D4DA3751E /* ref_counted.h in Headers */ = {isa = PBXBuildFile; fileRef = DD5984827E2EFF44F7DD67896B95F3CB /* ref_counted.h */; };
 		E10AB95B77DB699E175470829CFDC1B4 /* FirebaseFirestore.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F31D0D7D5F136A34858E65524F9B53 /* FirebaseFirestore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E141C8A612D73A95DFC40AE8C26155B6 /* timestamp_internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = CEB7A91C5997577EF1424980E31F59D0 /* timestamp_internal.cc */; settings = {COMPILER_FLAGS = "$(inherited) -Wreorder -Werror=reorder -Wno-comma -fno-objc-arc"; }; };
@@ -8981,7 +8980,7 @@
 		3A36696E2B0B5694E01192374FE7EFA5 /* useful.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = useful.h; path = src/core/lib/gpr/useful.h; sourceTree = "<group>"; };
 		3A370DF5966A55B897076AE71CD5C183 /* atomic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = atomic.h; path = src/core/lib/gprpp/atomic.h; sourceTree = "<group>"; };
 		3A463FFE3FF27C29FB2E60D791FEC2FA /* p256_64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = p256_64.h; path = src/third_party/fiat/p256_64.h; sourceTree = "<group>"; };
-		3A7ABF9D2559766800FB52BA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		3A7AC0402559A6A200FB52BA /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		3A7D683EE33CFFCF12673F1F767E2178 /* thread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread.h; path = src/include/openssl/thread.h; sourceTree = "<group>"; };
 		3A8739EF761C6BE662427D1E3CD15B45 /* PromisesObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromisesObjC-dummy.m"; sourceTree = "<group>"; };
 		3AEC123818E4C262E8BEFFA1A2313B0D /* asn1_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = asn1_compat.c; path = src/crypto/bytestring/asn1_compat.c; sourceTree = "<group>"; };
@@ -11443,10 +11442,9 @@
 				BAD61E99E84B029FE5B31056FF68E3A1 /* absl.framework in Frameworks */,
 				A7B7526F592ECAF828DE44DF03BE6B15 /* FirebaseCore.framework in Frameworks */,
 				5C86E99B82062833C2EE2C6F55B87527 /* Foundation.framework in Frameworks */,
-				3A7ABF9E2559766900FB52BA /* CoreServices.framework in Frameworks */,
+				3A7AC0412559A6A200FB52BA /* CoreServices.framework in Frameworks */,
 				F1884C0EF0FBA8422CE1E6047D6E3EB2 /* grpcpp.framework in Frameworks */,
 				928D8CAFEB09A1BCEC552A48577E04F6 /* leveldb.framework in Frameworks */,
-				E0E37D65C6F4A587EB97D793F167889F /* MobileCoreServices.framework in Frameworks */,
 				B1CB36782076F57DB8267BEB9FB3C01B /* nanopb.framework in Frameworks */,
 				E90ED4F65419A0FDAD2FEC1A936F3B5B /* SystemConfiguration.framework in Frameworks */,
 				AB9F5ED79974CBB8FA3428C622DDB6DF /* UIKit.framework in Frameworks */,
@@ -11698,7 +11696,7 @@
 		30EA5A1497E3F50F81B8632286AABE03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A7ABF9D2559766800FB52BA /* CoreServices.framework */,
+				3A7AC0402559A6A200FB52BA /* CoreServices.framework */,
 				B1928392E39BD846F6A323249802DCCC /* absl.framework */,
 				30887450B2879C7382F56996D7868C7E /* FBLPromises.framework */,
 				EEBD9A079B22C6BD03CED9259245CF53 /* FirebaseCore.framework */,
@@ -20257,7 +20255,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CLTypingLabel/CLTypingLabel-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CLTypingLabel/CLTypingLabel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -20702,7 +20700,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CLTypingLabel/CLTypingLabel-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CLTypingLabel/CLTypingLabel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

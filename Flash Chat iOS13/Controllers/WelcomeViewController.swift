@@ -11,14 +11,15 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var titleLabel: CLTypingLabel!
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.text = "⚡️FlashChat"
-
-        
+        titleLabel.text = K.appName
     }
 
 }
