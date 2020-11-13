@@ -17,8 +17,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     // MARK: - Actions
-
+    
     @IBAction func loginPressed(_ sender: UIButton) {
+        login()
+    }
+    
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        passwordTextfield.delegate = self
+    }
+    
+    // MARK: - Methods
+    
+    private func login() {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error = error {
@@ -32,11 +45,18 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // MARK: - Methods
-    
-    fileprivate func presentAlert(title: String, message: String, action: UIAlertAction) {
+    private func presentAlert(title: String, message: String, action: UIAlertAction) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(action)
         present(ac, animated: true)
+    }
+}
+
+// MARK: - Keyboard
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        login()
+        return true
     }
 }

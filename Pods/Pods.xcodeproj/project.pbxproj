@@ -211,7 +211,6 @@
 		0B31332E0096A7488A66319AA70705E3 /* semantic_version.upb.h in Copy src/core/ext/upb-generated/envoy/type Private Headers */ = {isa = PBXBuildFile; fileRef = AFCCDAF79471A5E975FAEB4E85FA1FD6 /* semantic_version.upb.h */; };
 		0B732FACF9E0D84AD4862E628F3E6D37 /* coding.h in Headers */ = {isa = PBXBuildFile; fileRef = C430A1BFEB9EC50C728D05DCF756B5E9 /* coding.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0B7B96DC10C47BEC36EAA68331706D42 /* FIRPhoneMultiFactorInfo+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C9397F313CCE81B26EABF2E85B384D /* FIRPhoneMultiFactorInfo+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0B7BE9DCB0E9F8DBC418DC3ECFC40320 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9684712099F4E8B80F1DD2FB339CAD49 /* Foundation.framework */; };
 		0B9CA099DD312AF8691F437ABD01F500 /* workaround_cronet_compression_filter.h in Copy src/core/ext/filters/workarounds Private Headers */ = {isa = PBXBuildFile; fileRef = 9B8C6A265ED4268DB3113D6E7EA90F1C /* workaround_cronet_compression_filter.h */; };
 		0BA143A589CD8B11F0E64C5000060C7E /* slice_internal.h in Copy src/core/lib/slice Private Headers */ = {isa = PBXBuildFile; fileRef = 90D5842896F77B070DF60223AC81063D /* slice_internal.h */; };
 		0BD1E7758C36FC7514D74BBFB0A7D797 /* stream_map.h in Headers */ = {isa = PBXBuildFile; fileRef = CF26C2CB9084BEDC94CBD028854E3BB3 /* stream_map.h */; };
@@ -969,6 +968,7 @@
 		3A8A212A411EF669F1A77CC12176244F /* pkcs8.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD0795F538C975804132BD287EA6D71 /* pkcs8.h */; };
 		3A9947C1BFE670E619D32E9D51B2FEC0 /* channel_stack_type.h in Copy src/core/lib/surface Private Headers */ = {isa = PBXBuildFile; fileRef = D016581D1EB3E818A6FEF444AE78CC95 /* channel_stack_type.h */; };
 		3A99FC45F068433B131B7329F3699127 /* mpmcqueue.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5698ECEF74555DD5B13F80CE82A4359A /* mpmcqueue.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
+		3A9F016D255DAA53000992A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9684712099F4E8B80F1DD2FB339CAD49 /* Foundation.framework */; };
 		3AAFD568C9C224FC74B9DAA1F693D7D5 /* lds.upb.c in Sources */ = {isa = PBXBuildFile; fileRef = 9978984AA18D16B289B5916F067E54D3 /* lds.upb.c */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		3AB576807C4E8F6F9E63C145F028CE6F /* init.cc in Sources */ = {isa = PBXBuildFile; fileRef = C28ACF37C054E40FAB35C3EC339C622B /* init.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
 		3AD3B813B647BFE57B29890A01A9E225 /* xds_channel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA47006ED158044C13367A2928AD6114 /* xds_channel.h */; };
@@ -11413,7 +11413,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B7BE9DCB0E9F8DBC418DC3ECFC40320 /* Foundation.framework in Frameworks */,
+				3A9F016D255DAA53000992A8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
