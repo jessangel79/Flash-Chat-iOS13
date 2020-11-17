@@ -9,54 +9,23 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
-    
-    // MARK: - Outlets
+class LoginViewController: RegisterViewController {
 
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    
-    // MARK: - Actions
-    
-    @IBAction func loginPressed(_ sender: UIButton) {
-        login()
-    }
-    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTextfield.delegate = self
+        identifierSegue = K.loginSegue
     }
     
     // MARK: - Methods
     
-    private func login() {
+    override func authentificationUser() {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    self.presentAlert(title: "Error login", message: error.localizedDescription, action: action)
-                } else {
-                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
-                }
+                self.authResult(error)
             }
         }
     }
-    
-    private func presentAlert(title: String, message: String, action: UIAlertAction) {
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(action)
-        present(ac, animated: true)
-    }
 }
 
-// MARK: - Keyboard
-
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        login()
-        return true
-    }
-}

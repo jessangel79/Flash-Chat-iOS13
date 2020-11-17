@@ -124,7 +124,7 @@
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
                                         <connections>
-                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9dE-Sc-egq"/>
+                                            <action selector="authentificationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDW-hc-cPw"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="jY9-l3-E1g">
@@ -228,7 +228,7 @@
                                             <color key="titleColor" name="BrandLightBlue"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginPressed:" destination="5v2-hE-4Ub" eventType="touchUpInside" id="Wlk-ga-czK"/>
+                                            <action selector="authentificationButtonTapped:" destination="5v2-hE-4Ub" eventType="touchUpInside" id="OAd-Xd-h8v"/>
                                         </connections>
                                     </button>
                                 </subviews>

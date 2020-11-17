@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+
 
 class MessageCell: UITableViewCell {
     
@@ -16,6 +19,26 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var rightAvatarImageView: UIImageView!
     @IBOutlet weak var leftAvatarImageView: UIImageView!
+    
+    // MARK: - Properties
+    
+    var message: Message? {
+        didSet {
+            label.text = message?.body
+            // This is a message from the current user.
+            if message?.sender == Auth.auth().currentUser?.email {
+                leftAvatarImageView.isHidden = true
+                rightAvatarImageView.isHidden = false
+                messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+                label.textColor = UIColor(named: K.BrandColors.purple)
+            } else { // This is a message from another sender.
+                leftAvatarImageView.isHidden = false
+                rightAvatarImageView.isHidden = true
+                messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+                label.textColor = UIColor(named: K.BrandColors.lightPurple)
+            }
+        }
+    }
     
     
     // MARK: - View Life Cycle
