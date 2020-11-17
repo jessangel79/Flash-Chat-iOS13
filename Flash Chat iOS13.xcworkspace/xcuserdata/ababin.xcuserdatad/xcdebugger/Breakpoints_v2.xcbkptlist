@@ -25,7 +25,7 @@
             <Locations>
                <Location
                   uuid = "EE2731B0-284D-406A-8437-D648DF169B55 - ba3ad5676a792f38"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "UIViewAlertForUnsatisfiableConstraints"
