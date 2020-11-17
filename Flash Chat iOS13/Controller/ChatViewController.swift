@@ -27,7 +27,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        navigationItem.title = K.appName
+        title = K.appName
         navigationItem.hidesBackButton = true
         messageTextfield.delegate = self
         
@@ -58,11 +58,13 @@ class ChatViewController: UIViewController {
             .order(by: K.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error) in
                 
-            self.messages = []
-            if let error = error {
-                print("There was an issue retrieving data from Firestore. \(error)")
-            } else {
-                if let snapshotDocuments = querySnapshot?.documents {
+                self.messages = []
+                
+                if let error = error {
+                    print("There was an issue retrieving data from Firestore. \(error)")
+                } else {
+                    guard let snapshotDocuments = querySnapshot?.documents else { return }
+                    //                if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
@@ -72,13 +74,33 @@ class ChatViewController: UIViewController {
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
                                 let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
                 }
             }
-        }
+                
+//            if let error = error {
+//                print("There was an issue retrieving data from Firestore. \(error)")
+//            } else {
+//                if let snapshotDocuments = querySnapshot?.documents {
+//                    for doc in snapshotDocuments {
+//                        let data = doc.data()
+//                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
+//                            let newMessage = Message(sender: messageSender, body: messageBody)
+//                            self.messages.append(newMessage)
+//
+//                            DispatchQueue.main.async {
+//                                self.tableView.reloadData()
+//                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+//                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
     
     private func sendMessage() {
@@ -112,17 +134,17 @@ extension ChatViewController: UITableViewDataSource {
         let message = messages[indexPath.row]
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as? MessageCell else { return UITableViewCell() }
-        cell.label.text = messages[indexPath.row].body
+        cell.label.text = message.body
         
         // This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {
-            cell.leftImageView.isHidden = true
-            cell.rightImageView.isHidden = false
+            cell.leftAvatarImageView.isHidden = true
+            cell.rightAvatarImageView.isHidden = false
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
             cell.label.textColor = UIColor(named: K.BrandColors.purple)
         } else { // This is a message from another sender.
-            cell.leftImageView.isHidden = false
-            cell.rightImageView.isHidden = true
+            cell.leftAvatarImageView.isHidden = false
+            cell.rightAvatarImageView.isHidden = true
             cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
             cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
         }
