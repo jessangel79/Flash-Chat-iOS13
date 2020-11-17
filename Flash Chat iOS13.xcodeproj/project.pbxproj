@@ -71,7 +71,6 @@
 			children = (
 				0B62819D235F0F4D00E35CAF /* README.md */,
 				0B628175235DEE8100E35CAF /* Flash Chat iOS13 */,
-				3AC9E4B92563DF3B002690F4 /* Extensions */,
 				0B628174235DEE8100E35CAF /* Products */,
 				167D2CDDBFCAF36798D4B356 /* Pods */,
 				A36BD7284276DA842F73C749 /* Frameworks */,
@@ -89,16 +88,11 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
-				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
-				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
 				3A61DCF4255B1B6000FBA7CE /* Model */,
 				0B628193235DF03400E35CAF /* View */,
 				0B628192235DF02000E35CAF /* Controller */,
-				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
-				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
-				0B628184235DEE8400E35CAF /* Info.plist */,
-				3A88FD992554828A000989B9 /* GoogleService-Info.plist */,
-				3A7ABFC325598E8200FB52BA /* Constants.swift */,
+				3AC9E4DB25641243002690F4 /* Helpers */,
+				3AC9E4DA256411E7002690F4 /* Supporting Files */,
 			);
 			path = "Flash Chat iOS13";
 			sourceTree = "<group>";
@@ -148,6 +142,28 @@
 				3AC9E4C42563E1C8002690F4 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3AC9E4DA256411E7002690F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
+				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
+				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
+				0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */,
+				0B628184235DEE8400E35CAF /* Info.plist */,
+				3A88FD992554828A000989B9 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AC9E4DB25641243002690F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A7ABFC325598E8200FB52BA /* Constants.swift */,
+				3AC9E4B92563DF3B002690F4 /* Extensions */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A36BD7284276DA842F73C749 /* Frameworks */ = {
@@ -439,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AS4ZG3MAQH;
-				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
+				INFOPLIST_FILE = "Flash Chat iOS13/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AS4ZG3MAQH;
-				INFOPLIST_FILE = "Flash Chat iOS13/Info.plist";
+				INFOPLIST_FILE = "Flash Chat iOS13/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

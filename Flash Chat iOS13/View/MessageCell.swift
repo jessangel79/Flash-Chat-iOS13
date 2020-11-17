@@ -27,19 +27,12 @@ class MessageCell: UITableViewCell {
             label.text = message?.body
             // This is a message from the current user.
             if message?.sender == Auth.auth().currentUser?.email {
-                leftAvatarImageView.isHidden = true
-                rightAvatarImageView.isHidden = false
-                messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-                label.textColor = UIColor(named: K.BrandColors.purple)
+                setSenderUI(shownRight: true, messageBubbleColor: K.BrandColors.lightPurple, labelColor: K.BrandColors.purple)
             } else { // This is a message from another sender.
-                leftAvatarImageView.isHidden = false
-                rightAvatarImageView.isHidden = true
-                messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
-                label.textColor = UIColor(named: K.BrandColors.lightPurple)
+                setSenderUI(shownRight: false, messageBubbleColor: K.BrandColors.purple, labelColor: K.BrandColors.lightPurple)
             }
         }
     }
-    
     
     // MARK: - View Life Cycle
     
@@ -54,4 +47,10 @@ class MessageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    private func setSenderUI(shownRight: Bool, messageBubbleColor: String, labelColor: String) {
+        leftAvatarImageView.isHidden = shownRight
+        rightAvatarImageView.isHidden = !shownRight
+        messageBubble.backgroundColor = UIColor(named: messageBubbleColor)
+        label.textColor = UIColor(named: labelColor)
+    }
 }

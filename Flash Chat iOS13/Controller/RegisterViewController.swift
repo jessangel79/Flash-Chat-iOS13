@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
     func authResult(_ error: Error?) {
         if let error = error {
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            self.presentAlert(title: "Error register", message: error.localizedDescription, action: action)
+            presentAlert(title: "Error register", message: error.localizedDescription, action: action)
         } else {
             self.performSegue(withIdentifier: self.identifierSegue, sender: self)
         }
