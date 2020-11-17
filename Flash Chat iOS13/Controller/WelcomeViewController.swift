@@ -13,7 +13,7 @@ class WelcomeViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var titleLabel: CLTypingLabel!
+    @IBOutlet weak var titleLabel: UILabel! // CLTypingLabel!
     
     // MARK: - View Life Cycle
     
@@ -27,27 +27,32 @@ class WelcomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        titleLabel.text = K.appName
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animationLabel()
+//        titleLabel.text = K.appName
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
 
 }
 
-//extension WelcomeViewController {
-//    /// animation Label
-//    func animationLabel() {
-//        titleLabel.text = ""
-//        var charIndex = 0.0
-//        let titleText = "⚡️FlashChat"
-//        for letter in titleText {
+extension WelcomeViewController {
+    /// animation Label
+    func animationLabel() {
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let titleText = K.appName
+        for letter in titleText {
 //            print("-")
 //            print(charIndex * 0.1)
 //            print(letter)
-//            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
-//                self.titleLabel.text?.append(letter)
-//            }
-//            charIndex += 1
-//        }
-//    }
-//}
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
+    }
+}
